@@ -83,3 +83,10 @@ body.wrong {
 .hide {
     display: none;
 }
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}

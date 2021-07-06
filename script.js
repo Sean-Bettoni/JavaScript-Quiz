@@ -5,6 +5,25 @@ const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
 
+// Quiz timer
+document.addEventListener('DOMContentLoaded', () => {
+    const timeLeftDisplay = document.querySelector('#time-left')
+    const startButton = document.querySelector('#startButton')
+    timeLeft = 60
+
+function countDown(){
+    setInterval(function(){
+        if(timeLeft <= 0 ) {
+            clearInterval(timeLeft = 0)
+        }
+        timeLeftDisplay.innerHTML = timeLeft
+        timeLeft -=1
+    }, 1000)
+}
+
+})
+
+
 let shuffledQuestions, currentQuestionIndex
 
 
@@ -88,7 +107,7 @@ function clearStatusClass(element) {
     element.classList.remove('wrong')
 }
 
-
+// Quiz Questions
 const questions = [
     {
     question: 'What is js and abbreviation for?',
